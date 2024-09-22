@@ -1,0 +1,42 @@
+.desktop{
+    width: 100%;
+    height: 100%;
+}
+
+.desktopIconContainer{
+    height: calc(100% - 60px);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.desktopIcon{
+    width: 70px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px 10px 5px 5px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.desktopIcon svg{
+    width: 45px;
+    height: 45px;
+}
+
+.iconName{
+    font-size: 12px;
+    color: white;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.desktopIcon:hover{
+    background-color: rgba(255, 255, 255, 0.15);
+}

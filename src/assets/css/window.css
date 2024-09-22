@@ -1,0 +1,63 @@
+.window{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #000000a0;
+    min-width: 300px;
+    min-height: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.activeWindow{
+    border: 1px solid #e5e5e594;
+    border-top: none;
+    z-index: 100;
+}
+
+.activeWindow .windowTitleBar{
+    background-color: #1ea6e6d0;
+}
+
+.windowTitleBar{
+    height: 30px;
+    background-color: #6d6d6dd0;
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    cursor: move;
+}
+
+.windowButtons{
+    display: flex;
+    align-items: center;
+}
+
+.windowTitle{
+    padding: 0 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.windowButton{
+    height: 30px;
+    width: 20px;
+    padding: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.minimizeWindowButton:hover{
+    background-color: #1ea7e6e8;
+}
+
+.maximizeWindowButton:hover{
+    background-color: #1ea7e6e8;
+}
+
+.closeWindowButton:hover{
+    background-color: #f54242;
+}

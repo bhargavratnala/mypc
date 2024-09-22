@@ -1,0 +1,83 @@
+.taskbar{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    filter: blur(0.5px);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0 10px 0 0;
+}
+
+.startButton{
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.startButton:hover{
+    background-color: rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+}
+
+.startButton svg{
+    width: 40px;
+    height: 40px;
+}
+
+.startMenu{
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%) scaleY(1);
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.closeStartMenu{
+    transform: translateY(0) scaleY(0);
+    opacity: 0;
+}
+
+.startMenuButton{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.startMenuButton:hover{
+    background-color: rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+}
+
+.startMenuButton svg{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.taskbarWindow{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    transition: all 0.3s;
+}
+
+.taskbarWindow:hover{
+    background-color: rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+}
+
+.taskbarWindow svg{
+    width: 30px;
+    height: 30px;
+}
+
+.taskbarWindowActive{
+    height: 55px;
+    z-index: 100;
+    border-bottom: 5px solid #1ea6e6d0;
+}
