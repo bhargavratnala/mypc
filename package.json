@@ -1,10 +1,13 @@
 {
   "name": "mypc",
+  "homepage": "bhargavratnala.github.io/mypc",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d dist",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
