@@ -8,17 +8,26 @@ function MyPC() {
         <img src={Image} alt="My PC" className='mypcImage' />
         <div className="detailsText">
           <h1 className='mypcTitle'>Bhargav Ratnala</h1>
-          <span>Full Stack Developer</span>
+          <span className="position">Full Stack Developer</span>
+          <p className="description">
+            Passionate about developing scalable applications using modern technologies.
+          </p>
         </div>
       </div>
       <div className='pcDetails'>
-        <h3>OS: B-OS</h3>
-        <span>Version: 1.0.0</span><br />
-        <span>Developed by Bhargav Ratnala</span>
-        
+        <h3>PC Details</h3>
+        <ul>
+          <li>OS: B-OS</li>
+          <li>Version: 1.0.0</li>
+          <li>Processor: Intel i7</li>
+          <li>RAM: 16 GB</li>
+          <li>Graphics: NVIDIA GTX 1650</li>
+          <li>Storage: 1TB SSD</li>
+          <li>Developed by Bhargav Ratnala</li>
+        </ul>
       </div>
     </div>
-  )
+  );
 }
 
 export default MyPC;

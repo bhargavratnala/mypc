@@ -1,6 +1,6 @@
 import '../assets/css/taskbar.css';
 import { FcLinux } from "react-icons/fc";
-import { RiRestartLine, RiSettings4Line } from "react-icons/ri";
+import { RiRestartLine } from "react-icons/ri";
 import SuspenseLoader from './SuspenseLoader';
 import { useEffect, useState } from 'react';
 import { BsFillLightningChargeFill } from "react-icons/bs";
@@ -88,11 +88,6 @@ function Taskbar( { windows, unMinimizeWindow, openWindow, setActive } : { windo
         <div className="taskbarOptions">
             <div className="taskbarOption">
                 { time }
-            </div>
-            <div className="taskbarOption">
-                <SuspenseLoader>
-                    <RiSettings4Line />
-                </SuspenseLoader>
             </div>
             <div className="taskbarOption">
                 <div className="batteryContainer">

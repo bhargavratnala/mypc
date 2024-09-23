@@ -1,0 +1,48 @@
+.skillsPage {
+  background-color: #1e1e1e;
+  color: #f4f4f4;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.skillsTitle {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skillCard {
+  background-color: #2c2c2c;
+  border-radius: 10px;
+  padding: 20px;
+  width: 38%;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.skillCard:hover {
+  transform: translateY(-5px);
+}
+
+.skillTitle {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #f4f4f4;
+}
+
+.skillDescription {
+  font-size: 14px;
+  color: #cccccc;
+}
