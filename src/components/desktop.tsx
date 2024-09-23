@@ -2,18 +2,26 @@ import Taskbar from "./taskbar";
 import '../assets/css/desktop.css';
 import DesktopIcon from "./desktopIcon";
 import { RiComputerLine, RiTerminalBoxFill } from "react-icons/ri";
-import { useState } from "react";
+import { MdCastForEducation } from "react-icons/md";
+import { GoGraph, GoProjectRoadmap } from "react-icons/go";
+import { useEffect, useState } from "react";
 import Window from "./window";
+import Terminal from "./terminal";
+import MyPC from "./mypc";
+import Projects from "./projects";
+import Skills from "./skills";
+import Education from "./education";
 
 function Desktop() {
 
   const [windows, setWindows] = useState([
     {
-      windowName: 'File Explorer',
+      windowName: 'My PC',
       isOpen : false,
       active : false,
       minimized : false,
       icon : <RiComputerLine />,
+      content: <MyPC />,
     },
     {
       windowName: 'Terminal',
@@ -21,13 +29,38 @@ function Desktop() {
       active : false,
       minimized : false,
       icon : <RiTerminalBoxFill />,
+      content: <Terminal open={openWindow} />,
+    },
+    {
+      windowName: 'Projects',
+      isOpen : false,
+      active : false,
+      minimized : false,
+      icon : <GoProjectRoadmap />,
+      content: <Projects />,
+    },
+    {
+      windowName: 'Skills',
+      isOpen : false,
+      active : false,
+      minimized : false,
+      icon : <GoGraph />,
+      content: <Skills />,
+    },
+    {
+      windowName: 'Education',
+      isOpen : false,
+      active : false,
+      minimized : false,
+      icon : <MdCastForEducation />,
+      content: <Education />,
     }
   ]);
 
   function openWindow(index : number) {
     const tempWindows = [...windows];
     tempWindows[index].isOpen = true;
-    tempWindows[index].active = true
+    tempWindows[index].active = true;
     setWindows(tempWindows);
   }
 
@@ -55,21 +88,27 @@ function Desktop() {
     setWindows(tempWindows);
   }
 
+  useEffect(() => {
+    document.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+    });
+  });
+
   return (
     <div className="desktop">
       <div className="desktopIconContainer">
         {windows.map((window, index) => {
           return (
-            <DesktopIcon desktopIconName={window.windowName} src={window.icon} open={() => {
-              openWindow(index);
-            }} key={index} />
+            <DesktopIcon desktopIconName={window.windowName} src={window.icon} open={openWindow} index={index} key={index} />
           );
         }
         )}
       </div>
+      
       <Taskbar windows={windows} unMinimizeWindow={unMinimizeWindow} openWindow={openWindow} setActive={setActive} />
+      
       {windows.map((window, index) => {
-        if(window.isOpen && !window.minimized)
+        if(window.isOpen)
         return (
           <Window windowName={window.windowName} minimize={() => {
             minimizeWindow(index);
@@ -81,7 +120,7 @@ function Desktop() {
               tempWindows[index].active = value;
               setWindows(tempWindows);
             }
-          } active={window.active} key={index} windowId={index} />
+          } active={window.active} isMinimized={window.minimized} content={window.content} key={index} windowId={index} />
         );
       })
       }

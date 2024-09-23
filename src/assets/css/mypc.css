@@ -1,0 +1,39 @@
+.mypc{
+    width: 100%;
+    background-color: #000;
+    min-height: calc(100% - 30px);
+}
+
+.details{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.mypcImage{
+    width: max(200px, 20%);
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.detailsText{
+    text-align: center;
+    margin: 10px;
+}
+
+.mypcTitle{
+    font-size: 30px;
+    color: #00FF00;
+}
+
+.pcDetails{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 20px;
+    color: #FFF;
+}

@@ -81,3 +81,27 @@
     z-index: 100;
     border-bottom: 5px solid #1ea6e6d0;
 }
+
+.taskbarOptions{
+    margin-left: auto;
+    margin-right: 10px;
+    height: 40px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.taskbarOptions:hover{
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.taskbarOption{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+}

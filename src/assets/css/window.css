@@ -9,6 +9,10 @@
     overflow: hidden;
 }
 
+.minimize{
+    display: none;
+}
+
 .activeWindow{
     border: 1px solid #e5e5e594;
     border-top: none;
@@ -60,4 +64,9 @@
 
 .closeWindowButton:hover{
     background-color: #f54242;
+}
+
+.windowContent{
+    height: calc(100% - 30px);
+    overflow: hidden auto;
 }

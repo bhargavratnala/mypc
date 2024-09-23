@@ -1,0 +1,39 @@
+.terminal{
+    width: 100%;
+    height: calc(100% - 25px);
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+.inputCommand{
+    width: 100%;
+    color: #00FF00;
+    display: flex;
+    align-items: center;
+}
+
+.command{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #FFF;
+    display: inline;
+    align-items: center;
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+.history{
+    color: #00FF00;
+    font-size: 16px;
+    height: fit-content;
+}
+
+.history .inputCommand{
+    display: block;
+}
+
+.output{
+    color: #FFF;
+    font-size: 16px;
+}
