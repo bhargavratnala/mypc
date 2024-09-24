@@ -1,7 +1,6 @@
 import '../assets/css/taskbar.css';
 import { FcLinux } from "react-icons/fc";
 import { RiRestartLine } from "react-icons/ri";
-import SuspenseLoader from './SuspenseLoader';
 import { useEffect, useState } from 'react';
 import { BsFillLightningChargeFill } from "react-icons/bs";
 
@@ -62,9 +61,7 @@ function Taskbar( { windows, unMinimizeWindow, openWindow, setActive } : { windo
                     window.location.reload();
                 }, 300);
             }}>
-                <SuspenseLoader>
-                    <RiRestartLine />
-                </SuspenseLoader>
+                <RiRestartLine />
                 Restart
             </div>
         </div>

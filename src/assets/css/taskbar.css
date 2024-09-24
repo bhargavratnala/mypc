@@ -60,10 +60,13 @@
 
 .taskbarWindow{
     height: 60px;
+    width: 40px;
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 0 10px;
     transition: all 0.3s;
+    position: relative;
 }
 
 .taskbarWindow:hover{
@@ -72,8 +75,8 @@
 }
 
 .taskbarWindow svg{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .taskbarWindowActive{

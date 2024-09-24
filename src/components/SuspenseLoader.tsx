@@ -1,11 +1,13 @@
-import { Suspense } from "react";
-import { ReactNode } from "react";
+import { Suspense, lazy } from "react";
 import Loader from "./loader";
 
-const SuspenseLoader = ({ children } : { children: ReactNode }) => {
+const SuspenseLoader = ({ path } : { path: string }) => {
+
+  const Img = lazy(() => import(`../imageLoaders/${path}`));
+
   return (
     <Suspense fallback={<Loader />}>
-      {children}
+      <Img />
     </Suspense>
   );
 };

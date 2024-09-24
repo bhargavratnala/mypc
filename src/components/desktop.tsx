@@ -1,10 +1,8 @@
 import Taskbar from "./taskbar";
 import '../assets/css/desktop.css';
 import DesktopIcon from "./desktopIcon";
-import { RiComputerLine, RiTerminalBoxFill } from "react-icons/ri";
-import { MdCastForEducation } from "react-icons/md";
-import { GoGraph, GoProjectRoadmap } from "react-icons/go";
 import { useEffect, useState } from "react";
+import SuspenseLoader from "./SuspenseLoader";
 import Window from "./window";
 import Terminal from "./terminal";
 import MyPC from "./mypc";
@@ -20,7 +18,7 @@ function Desktop() {
       isOpen : false,
       active : false,
       minimized : false,
-      icon : <RiComputerLine />,
+      icon : <SuspenseLoader path="computer" />,
       content: <MyPC />,
     },
     {
@@ -28,7 +26,7 @@ function Desktop() {
       isOpen : false,
       active : false,
       minimized : false,
-      icon : <RiTerminalBoxFill />,
+      icon : <SuspenseLoader path="terminal" />,
       content: <Terminal open={openWindow} />,
     },
     {
@@ -36,7 +34,7 @@ function Desktop() {
       isOpen : false,
       active : false,
       minimized : false,
-      icon : <GoProjectRoadmap />,
+      icon : <SuspenseLoader path="projects" />,
       content: <Projects />,
     },
     {
@@ -44,7 +42,7 @@ function Desktop() {
       isOpen : false,
       active : false,
       minimized : false,
-      icon : <GoGraph />,
+      icon : <SuspenseLoader path="skills" />,
       content: <Skills />,
     },
     {
@@ -52,7 +50,7 @@ function Desktop() {
       isOpen : false,
       active : false,
       minimized : false,
-      icon : <MdCastForEducation />,
+      icon : <SuspenseLoader path="education" />,
       content: <Education />,
     }
   ]);
